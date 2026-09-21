@@ -6,6 +6,9 @@ import { createUrlTable } from "./db/migrate.js";
 const app = express();
 
 app.use(express.json());
+
+// app.use('/api', );
+
 app.use(errorHandler);
 
 createUrlTable();
