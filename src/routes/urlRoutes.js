@@ -1,8 +1,9 @@
 import express from "express";
-import { shortenUrl } from "../controllers/urlController.js";
+import { shortenUrl, redirectUrl } from "../controllers/urlController.js";
 
 const router = express.Router();
 
 router.post("/shorten", shortenUrl);
+router.get("/getUrl/:code", redirectUrl);
 
 export default router;

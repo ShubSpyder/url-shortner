@@ -6,7 +6,7 @@ export const createUrlTable = async () => {
             CREATE TABLE IF NOT EXISTS urls(
              id SERIAL PRIMARY KEY,
              code VARCHAR(12) UNIQUE NOT NULL,
-             original_url TEXT NOT NULL,
+             original_url UNIQUE TEXT NOT NULL,
              created_at TIMESTAMP NOT NULL DEFAULT now()
             )
             `);
